@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var jade = require('gulp-jade');
-var sass = require('')
 
 gulp.task('jade', function(){
     gulp.src('./src/*.jade')
