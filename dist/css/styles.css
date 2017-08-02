@@ -1,0 +1,9 @@
+.menu {
+	/*background-color: white;*/
+	display: flex;
+	flex-wrap: wrap;
+}
+
+a {
+	font-color: black;
+}

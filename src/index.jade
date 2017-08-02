@@ -4,23 +4,47 @@ head
 	meta(charset="utf-8")
 	meta(name="viewport", content="width=device-width, initial-scale=1.0")
 	title Triangle
-	link(rel="stylesheet", href="css/main.css")
+	link(rel="stylesheet", href="css/styles.css")
 	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css")
 	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
 	link(href="https://fonts.googleapis.com/css?family=Arimo" rel="styles")
-	link(rel="shortcut icon" href="img/b.jpg" type="image/x-icon")
+	link(rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon")
 body
 
 header
-	nav
-		div.nav-wrapper
-			a.brand-log("href="#"Logo)
-			ul.right.hide-on-med-and-down(id="nav-mobile")
+	nav.container.menu
+		div.row
+			div.col.s4
+				img.responsive-img(src="assets/images/logo.png")
+			ul.col.s7.offset-s1
 				li
-					a(href="sass.html" Sass)
+					a Home
 				li
-					a(href="badges.html" Components)
+					a Pages
 				li
-					a(href="collapsible.html" JavaScript
+					a Blog
+				li
+					a Portafolio
+				li
+					a Shortcodes
+				li
+					a
+						i.material-icons(search)
 
-	script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js")
+	section.container
+		div.row
+			div
+				img.responsive-img(src="assets/images/coming-soon-bg.png")
+
+	section.container
+		div.row
+			div.col.s6
+				img.responsive-img(src="assets/images/aboutus/1.png")
+		div.row
+			div.col.s6
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi nulla sed, labore reprehenderit perspiciatis mollitia, dolor, possimus quas, rem repellat. A officia maiores, blanditiis tempora nobis. Temporibus, iusto, ipsa.
+
+
+
+
+
