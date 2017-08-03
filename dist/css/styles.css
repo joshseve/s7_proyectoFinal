@@ -7,3 +7,11 @@
 a {
 	font-color: black;
 }
+
+/*.imagenHome
+	background: assets/images/coming-soon-bg.png");*/
+
+.cuadrosHome {
+	display: flex;
+	text-align: center;
+}

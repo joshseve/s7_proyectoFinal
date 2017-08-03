@@ -12,11 +12,21 @@ head
 body
 
 header
-	nav.container.menu
+
+	section
+		div.row
+			div.col.s2.offset-s9.grey-text.iconosHome
+				i(class="fa fa-facebook", aria-hidden="true")
+				i(class="fa fa-twitter", aria-hidden="true")
+				i(class="fa fa-google-plus", aria-hidden="true")
+				i(class="fa fa-dribbble", aria-hidden="true")
+				i(class="fa fa-instagram", aria-hidden="true")
+
+	nav.menu
 		div.row
 			div.col.s4
 				img.responsive-img(src="assets/images/logo.png")
-			ul.col.s7.offset-s1
+			ul.right.hide-on-med-and-down
 				li
 					a Home
 				li
@@ -31,20 +41,25 @@ header
 					a
 						i.material-icons(search)
 
-	section.container
+	section
 		div.row
-			div
+			div.imagenHome
 				img.responsive-img(src="assets/images/coming-soon-bg.png")
 
-	section.container
+	section
 		div.row
 			div.col.s6
 				img.responsive-img(src="assets/images/aboutus/1.png")
-		div.row
 			div.col.s6
 				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi nulla sed, labore reprehenderit perspiciatis mollitia, dolor, possimus quas, rem repellat. A officia maiores, blanditiis tempora nobis. Temporibus, iusto, ipsa.
 
-
-
-
-
+	section
+		div.row
+			div.col.s3.offset-s1.cuadrosHome
+				img.responsive-img(src="assets/images/home/icon1.png")
+				h5 Incredibly Responsive
+					p Ground round tenderloin flank shank ribeye. Hamkevin meatball swine. Cow shankle beef sirloin chicken ground round.
+			div.col.s3.offset-s1.cuadrosHome
+				img.responsive-img(src="assets/images/home/icon2.png")
+			div.col.s3.offset-s1.cuadrosHome
+				img.responsive-img(src="assets/images/home/icon3.png")
