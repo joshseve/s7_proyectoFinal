@@ -1,3 +1,16 @@
+//- Savar el mixin de la estructura de HTML sirve para no provocar ciclos infinitos.
+mixin about (imagen, nombreImagen, titulo, texto)
+	.col.s4.center
+		img(src="assets/images/home/#{imagen}" alt="#{nombreImagen}")
+		h5 #{titulo}
+		p #{texto}
+
+mixin meet (imagen, nombreImagen, subtitulo, texto)
+	.col.s3.center
+		img.responsive-img(src="assets/images/aboutus/#{imagen}" alt="#{nombreImagen}")
+		h5 #{subtitulo}
+		p #{texto}
+
 <!DOCTYPE html>
 html(lang="en")
 head
@@ -9,6 +22,7 @@ head
 	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
 	link(href="https://fonts.googleapis.com/css?family=Arimo" rel="styles")
 	link(rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon")
+
 body
 
 header
@@ -25,41 +39,92 @@ header
 	nav.menu
 		div.row
 			div.col.s4
-				img.responsive-img(src="assets/images/logo.png")
-			ul.right.hide-on-med-and-down
+				img.responsive-img(src="assets/images/logo.png" )
+			ul.right.hide-on-med-and-downs
 				li
-					a Home
+					a.letras Home
 				li
-					a Pages
+					a.letras Pages
 				li
-					a Blog
+					a.letras Blog
 				li
-					a Portafolio
+					a.letras Portafolio
 				li
-					a Shortcodes
+					a.letras Shortcodes
 				li
-					a
-						i.material-icons(search)
+					a.letras
+						i.material-icons.search
+
+	section.row
+		div.imagenHome
+			h3 Abouts Us
+			p Why our Clients love to work with us.
 
 	section
-		div.row
-			div.imagenHome
-				img.responsive-img(src="assets/images/coming-soon-bg.png")
-
-	section
-		div.row
+		.row
 			div.col.s6
 				img.responsive-img(src="assets/images/aboutus/1.png")
-			div.col.s6
+			div.col.s6.introduccionHome
 				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nisi nulla sed, labore reprehenderit perspiciatis mollitia, dolor, possimus quas, rem repellat. A officia maiores, blanditiis tempora nobis. Temporibus, iusto, ipsa.
 
-	section
-		div.row
-			div.col.s3.offset-s1.cuadrosHome
-				img.responsive-img(src="assets/images/home/icon1.png")
-				h5 Incredibly Responsive
-					p Ground round tenderloin flank shank ribeye. Hamkevin meatball swine. Cow shankle beef sirloin chicken ground round.
-			div.col.s3.offset-s1.cuadrosHome
-				img.responsive-img(src="assets/images/home/icon2.png")
-			div.col.s3.offset-s1.cuadrosHome
-				img.responsive-img(src="assets/images/home/icon3.png")
+	section.container
+		.row
+			+about("icon1.png", "cuadroRojo", "Incredibly Responsive", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit corporis id ab quidem, necessitatibus reprehenderit quod molestias recusandae in aliquam.")
+			+about("icon2.png", "cuadroAzul", "Superior Typography", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit corporis id ab quidem, necessitatibus reprehenderit quod molestias recusandae in aliquam.")
+			+about("icon3.png", "cuadroAmarillo", "Swift Page Builder", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit corporis id ab quidem, necessitatibus reprehenderit quod molestias recusandae in aliquam.")
+
+	section.row.imagenHome
+			div.col.s6
+				h3 Triangle Corporate Template
+				p A responsive, retina-ready & wide miltiporpose template.
+			div.col.s2
+				a.waves-effect.waves-light.btn-large.botonTour TAKE THE TOUR
+			div.col.s4
+				img.responsive-img(src="assets/images/home/tour-icon2.png")
+
+	section.container
+		.row
+			+meet("4.jpg", "cuadroAzulClaro", "John Doe", "CEO & Developer")
+			+meet("3.jpg", "cuadroRojo", "John Doe", "CEO & Developer")
+			+meet("2.jpg", "cuadroAzulObscuro", "John Doe", "CEO & Developer")
+			+meet("1.jpg", "cuadroAmarillo", "John Doe", "CEO & Developer")
+
+	section.container.fondoCirculos
+		img.responsive-img(src="assets/images/home/under.png")
+
+	section.footer
+		.row
+			.col.s4.offset-s1
+				h5 Testimonial
+					.col.s4
+						img(src="assets/images/home/profile1.png")
+					.col.s8
+						p "Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail."
+						p.red-text - Jhon Kalis
+					.col.s4
+						img(src="assets/images/home/profile2.png")
+					.col.s8
+						p "Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod."
+						p.red-text - Abraham Josef
+			.col.s3
+				h5 Contacts
+					p.red-text E-mail: email@email.com
+					p Phone: +1 (123) 456 7890
+					p Fax: +1 (123) 456 7891
+					br
+					h5 Address
+					p Unit C2, St. Vincent's Trading Est.,
+					p Feeder Road,
+					p Bristol, BS20UY
+					p United Kingdom
+			.col.s3
+				h5 Send a message
+					textarea(placeholder="Name")
+					textarea(placeholder="Email Id")
+					textarea(placeholder="Your text here")
+					button.btn.btn-large.submit.center SUBMIT
+
+		.row.center.white-text
+			p ©Your Company 2014, All Rights Reserved.
+			p Crafted by
+				span.blue-text Allie
